@@ -5,7 +5,7 @@ const app= express();
 app.get('/',(req,res)=>{
     res.send('Hello world')
 })
-app.get('/joke',(req,res)=>{
+app.get('/api/joke',(req,res)=>{
     const joke=[{
         id:1,
         content:"joke 1",
