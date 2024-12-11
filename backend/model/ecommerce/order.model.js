@@ -22,7 +22,17 @@ customer:{
     ref:'User',
     required:true
 },
-orderItems:{type:[OrderItemSchema]}
+orderItems:{type:[OrderItemSchema]},
+address:{
+    type:String,
+    required:true
+},
+status:{
+    type:String,
+    enum:['PENDING','CANCELED','DELIVERED'],
+    default:'PENDING'
+ 
+}
 },{timestamps:true});
 
 export const Order= mongoose.model('Order',orderSchema)
